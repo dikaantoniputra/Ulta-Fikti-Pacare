@@ -10,7 +10,9 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link href="https://feeldreams.github.io/heihbd/style.css" rel="stylesheet" type="text/css" />
   <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
   <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
-  
+  <style>
+    
+  </style>
 <head>
 <title>Happy Birthday</title>
 <link rel="icon" type="image/x-icon" href="https://malasid.github.io/favicon.png">
@@ -29,7 +31,7 @@
 <body>
 	
    <!-- Ganti Audio di sini -->
-   <audio src="https://feeldreams.github.io/djikhlas.mp3" id="linkmp3" class="sembunyi"></audio>
+   <audio src="Bg.mp3" id="linkmp3" class="sembunyi"></audio>
    
    <div id="bodyblur">
      <!-- Wallpaper --><img src="https://cdn1-production-images-kly.akamaized.net/89NbN9oEgcG9LQoiu_vnJIlGr_w=/1200x900/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4261916/original/016051200_1671081588-17682382_Birthday_7_1_.jpg" id="wallpaper"/><div id="beneranblur"></div>
@@ -57,7 +59,7 @@
      <p id="halo" class="halo"></p>
      
      <div><blockquote id='bq' data-text='㋡'>
-       <p id="kalimat">Aku Ada Sesuatu Nih 🤣❤️</p>
+       <p id="kalimat">Aku Ada Sesuatu Nih ❤️</p>
 
        <p id="pesan1">Klik 4 LOVE di Bawah! 😆❤️</p>
        <div id="kolombaru">
@@ -69,8 +71,8 @@
 
        <p id="pesan2">Tunggu...</p>
        <!-- Pesan -->
-       <p id="pesan3">Ciee.. Ada yang Ultah Nih 🤣❤️</p>
-       <p id="pesan4">Happy Birthday, </p>
+       <!-- <p id="pesan3">Ciee.. Ada yang Ultah Nih 🤣❤️</p> -->
+       <p id="pesan4"> </p>
        <p id="pesan5" class="gaya2">Pertama aku mau bilang Terimakasih buat kamu yang udah dateng dihidupku, kamu yang udah dateng bikin hidupku penuh warna</p>
        <p id="pesan6" class="gaya2">Btw kamu ulang tahun ya Udah 21 tahun aja hehe bentar lagi tua🤪</p>
        <p id="pesan7" class="gaya2">semoga kamu diumur 21 ini semakin bahagia, doa doa mu terkabul semua, Sehat selalu seterusnya</p>
@@ -102,7 +104,7 @@
      </blockquote></div>
 
      <!-- Tombol Kirim Pesan -->
-     <div id="Tombol"><a id="By">&#128140; REMINDER</a></div>
+     <div id="Tombol"><a id="By">&#128140; Lanjut</a></div>
 
      <!-- Pesan Tambahan -->
      <p id="katatambahan" class="sembunyi">Gajadi deh aku marah 😜</p>
@@ -165,7 +167,7 @@
     }
   
     async function inipesan() {
-      window.nama = "Raisya Aqilah Triandini";
+      window.nama = "Raisya aqilah triandini ❤";
       vketikhalo = "Hai, " + nama + " ✨";
       mulainama();
     }
@@ -246,7 +248,7 @@
   }
   function aktiopsL(){opsL.innerHTML=defopsL;opsL.style.opacity=".8";opsLclick=1;opsLcheck+=1;}
   function gantiopsL(){opsL.innerHTML="[ Klik beberapa LOVE-nya ]";opsL.style.opacity=".8";}
-  function otomatis(){pesan3.style="transition:none";pesan8.style="display:none";kalimat.style="opacity:0";if(otoaktipesan==0){setTimeout(otolanj,400)}}
+  function otomatis(){pesan8.style="display:none";kalimat.style="opacity:0";if(otoaktipesan==0){setTimeout(otolanj,400)}}
   function otolanj(){kalimat.style="opacity:1";}
 
   function aktipesan1(){kalimat.innerHTML=pesan1.innerHTML;kolombaru.style="position:relative;opacity:1;transform:scale(1);";}
@@ -257,21 +259,10 @@
   new TypeIt("#kalimat", {
   strings: ["" + vketik2], startDelay: 20, speed: 40, cursor: true, deleteSpeed: 50, breakLines: false, waitUntilVisible: true, lifelike: true,
   afterComplete: function(){
-    setTimeout(aktipesan3,500);
+    setTimeout(otomatis,600);setTimeout(aktipesan4,1010);
   },}).go();
   }
-  vketik3=pesan3.innerHTML;pesan3.innerHTML="";
-  function aktipesan3(){
-  kalimat.style="display:none";
-  pesan3.style="position:relative;opacity:1;transform: scale(1)";
-  wallpaper.style="transform: scale(1)";
-  fthilang();ftganti=2;setTimeout(ftmuncul,300);
-  new TypeIt("#pesan3", {
-  strings: ["" + vketik3], startDelay: 1, speed: 45, cursor: true, waitUntilVisible: true, lifelike: true,
-  afterComplete: function(){
-    pesan3.innerHTML=vketik3;setTimeout(otomatis,600);setTimeout(aktipesan4,1010);
-  },}).go();
-  }
+
   function aktipesan4() {
     wallpaper.style = "transform: scale(1.5);";
     kalimat.innerHTML = pesan4.innerHTML + nama + " 🥳";
@@ -288,7 +279,7 @@ function aktipesan5() {
     wallpaper.style = "transform: scale(1);";
     pesan5.style = "position:relative;opacity:1;transform: scale(1);display:block";
     new TypeIt("#pesan5", {
-        strings: ["" + vketik5], startDelay: 1, speed: 52, cursor: true, waitUntilVisible: true, lifelike: true,
+        strings: ["" + vketik5], startDelay: 1, speed: 80, cursor: true, waitUntilVisible: true, lifelike: true,
         afterComplete: function() {
             pesan5.innerHTML = vketik5 + " ><";
             setTimeout(aktipesan6, 800);
@@ -303,7 +294,7 @@ function aktipesan6() {
     pesan5.style = "display:none"; // Hide pesan5
     pesan6.style = "position:relative;opacity:1;transform: scale(1);display:block";
     new TypeIt("#pesan6", {
-        strings: ["" + vketik6], startDelay: 1, speed: 52, cursor: true, waitUntilVisible: true, lifelike: true,
+        strings: ["" + vketik6], startDelay: 1, speed: 80, cursor: true, waitUntilVisible: true, lifelike: true,
         afterComplete: function() {
             pesan6.innerHTML = vketik6;
             setTimeout(aktipesan7, 800);
@@ -321,7 +312,7 @@ function aktipesan7() {
     ftganti = 1;
     setTimeout(ftmuncul, 300);
     new TypeIt("#pesan7", {
-        strings: ["" + vketik7], startDelay: 1, speed: 52, cursor: true, waitUntilVisible: true, lifelike: true,
+        strings: ["" + vketik7], startDelay: 1, speed: 80, cursor: true, waitUntilVisible: true, lifelike: true,
         afterComplete: function() {
             pesan7.innerHTML = vketik7;
             fungsi = 1;
@@ -340,7 +331,7 @@ function aktireminder1() {
     ftganti = 1;
     setTimeout(ftmuncul, 300);
     new TypeIt("#reminder1", {
-        strings: ["" + vreminder1], startDelay: 1, speed: 52, cursor: true, waitUntilVisible: true, lifelike: true,
+        strings: ["" + vreminder1], startDelay: 1, speed: 80, cursor: true, waitUntilVisible: true, lifelike: true,
         afterComplete: function() {
             reminder1.innerHTML = vreminder1;
             fungsi = 1;
@@ -359,7 +350,7 @@ function aktireminder2() {
     ftganti = 1;
     setTimeout(ftmuncul, 300);
     new TypeIt("#reminder2", {
-        strings: ["" + vreminder2], startDelay: 1, speed: 52, cursor: true, waitUntilVisible: true, lifelike: true,
+        strings: ["" + vreminder2], startDelay: 1, speed: 80, cursor: true, waitUntilVisible: true, lifelike: true,
         afterComplete: function() {
             reminder2.innerHTML = vreminder2;
             fungsi = 1;
@@ -378,7 +369,7 @@ function aktireminder3() {
     ftganti = 1;
     setTimeout(ftmuncul, 300);
     new TypeIt("#reminder3", {
-        strings: ["" + vreminder3], startDelay: 1, speed: 52, cursor: true, waitUntilVisible: true, lifelike: true,
+        strings: ["" + vreminder3], startDelay: 1, speed: 80, cursor: true, waitUntilVisible: true, lifelike: true,
         afterComplete: function() {
             reminder3.innerHTML = vreminder3;
             fungsi = 1;
@@ -397,7 +388,7 @@ function aktireminder4() {
     ftganti = 1;
     setTimeout(ftmuncul, 300);
     new TypeIt("#reminder4", {
-        strings: ["" + vreminder4], startDelay: 1, speed: 52, cursor: true, waitUntilVisible: true, lifelike: true,
+        strings: ["" + vreminder4], startDelay: 1, speed: 80, cursor: true, waitUntilVisible: true, lifelike: true,
         afterComplete: function() {
             reminder4.innerHTML = vreminder4;
             fungsi = 1;
@@ -416,7 +407,7 @@ function aktireminder5() {
     ftganti = 1;
     setTimeout(ftmuncul, 300);
     new TypeIt("#reminder5", {
-        strings: ["" + vreminder5], startDelay: 1, speed: 52, cursor: true, waitUntilVisible: true, lifelike: true,
+        strings: ["" + vreminder5], startDelay: 1, speed: 80, cursor: true, waitUntilVisible: true, lifelike: true,
         afterComplete: function() {
             reminder5.innerHTML = vreminder5;
             fungsi = 1;
@@ -435,7 +426,7 @@ function aktireminder6() {
     ftganti = 1;
     setTimeout(ftmuncul, 300);
     new TypeIt("#reminder6", {
-        strings: ["" + vreminder6], startDelay: 1, speed: 52, cursor: true, waitUntilVisible: true, lifelike: true,
+        strings: ["" + vreminder6], startDelay: 1, speed: 80, cursor: true, waitUntilVisible: true, lifelike: true,
         afterComplete: function() {
             reminder6.innerHTML = vreminder6;
             fungsi = 1;
@@ -454,7 +445,7 @@ function aktireminder7() {
     ftganti = 1;
     setTimeout(ftmuncul, 300);
     new TypeIt("#reminder7", {
-        strings: ["" + vreminder7], startDelay: 1, speed: 52, cursor: true, waitUntilVisible: true, lifelike: true,
+        strings: ["" + vreminder7], startDelay: 1, speed: 80, cursor: true, waitUntilVisible: true, lifelike: true,
         afterComplete: function() {
             reminder7.innerHTML = vreminder7;
             fungsi = 1;
@@ -473,7 +464,7 @@ function aktireminder8() {
     ftganti = 1;
     setTimeout(ftmuncul, 300);
     new TypeIt("#reminder8", {
-        strings: ["" + vreminder8], startDelay: 1, speed: 52, cursor: true, waitUntilVisible: true, lifelike: true,
+        strings: ["" + vreminder8], startDelay: 1, speed: 80, cursor: true, waitUntilVisible: true, lifelike: true,
         afterComplete: function() {
             reminder8.innerHTML = vreminder8;
             fungsi = 1;
@@ -492,7 +483,7 @@ function aktireminder9() {
     ftganti = 1;
     setTimeout(ftmuncul, 300);
     new TypeIt("#reminder9", {
-        strings: ["" + vreminder9], startDelay: 1, speed: 52, cursor: true, waitUntilVisible: true, lifelike: true,
+        strings: ["" + vreminder9], startDelay: 1, speed: 80, cursor: true, waitUntilVisible: true, lifelike: true,
         afterComplete: function() {
             reminder9.innerHTML = vreminder9;
             fungsi = 1;
@@ -511,7 +502,7 @@ function aktireminder10() {
     ftganti = 1;
     setTimeout(ftmuncul, 300);
     new TypeIt("#reminder10", {
-        strings: ["" + vreminder10], startDelay: 1, speed: 52, cursor: true, waitUntilVisible: true, lifelike: true,
+        strings: ["" + vreminder10], startDelay: 1, speed: 80, cursor: true, waitUntilVisible: true, lifelike: true,
         afterComplete: function() {
             reminder10.innerHTML = vreminder10;
             fungsi = 1;
@@ -531,7 +522,7 @@ function aktireminder11() {
     ftganti = 1;
     setTimeout(ftmuncul, 300);
     new TypeIt("#reminder11", {
-        strings: ["" + vreminder11], startDelay: 1, speed: 52, cursor: true, waitUntilVisible: true, lifelike: true,
+        strings: ["" + vreminder11], startDelay: 1, speed: 80, cursor: true, waitUntilVisible: true, lifelike: true,
         afterComplete: function() {
             reminder11.innerHTML = vreminder11;
             fungsi = 1;
